@@ -1,39 +1,35 @@
-
 import Foundation
 
 func recognizeSongWithAudio(audioData: Data, apiKey: String, completion: @escaping (Result<[String: Any], Error>) -> Void) {
-    let apiUrl = "https://api.audd.io/"
-    
-    let parameters: [String: Any] = [
-        "api_token": "a2c191a5a21f6513d7b9d12b5112ef24",
-        "method": "recognize",
-        // Add other parameters if needed
-    ]
+    let apiUrl = "https://api.audd.io"
     
     var request = URLRequest(url: URL(string: apiUrl)!)
     request.httpMethod = "POST"
     
-    let boundary = "Boundary-\(UUID().uuidString)"
-    request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+    let boundary = UUID().uuidString
     
-    var data = Data()
+    let contentType = "multipart/form-data; boundary=\(boundary)"
+    request.setValue(contentType, forHTTPHeaderField: "Content-Type")
     
-    for (key, value) in parameters {
-        data.append("--\(boundary)\r\n".data(using: .utf8)!)
-        data.append("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n".data(using: .utf8)!)
-        data.append("\(value)\r\n".data(using: .utf8)!)
-    }
+    var bodyData = Data()
     
-    data.append("--\(boundary)\r\n".data(using: .utf8)!)
-    data.append("Content-Disposition: form-data; name=\"file\"; filename=\"recording.wav\"\r\n".data(using: .utf8)!)
-    data.append("Content-Type: audio/wav\r\n\r\n".data(using: .utf8)!)
-    data.append(audioData)
-    data.append("\r\n".data(using: .utf8)!)
-    data.append("--\(boundary)--".data(using: .utf8)!)
+    // API Token Parameter
+    bodyData.append("--\(boundary)\r\n".data(using: .utf8)!)
+    bodyData.append("Content-Disposition: form-data; name=\"api_token\"\r\n\r\n".data(using: .utf8)!)
+    bodyData.append("\(apiKey)\r\n".data(using: .utf8)!)
     
-    request.httpBody = data
+    // Audio File Parameter
+    bodyData.append("--\(boundary)\r\n".data(using: .utf8)!)
+    bodyData.append("Content-Disposition: form-data; name=\"file\"; filename=\"recording.m4a\"\r\n".data(using: .utf8)!)
+    bodyData.append("Content-Type: audio/m4a\r\n\r\n".data(using: .utf8)!)
+    bodyData.append(audioData)
+    bodyData.append("\r\n".data(using: .utf8)!)
     
-    let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+    bodyData.append("--\(boundary)--\r\n".data(using: .utf8)!)
+    
+    request.httpBody = bodyData
+    
+    let task = URLSession.shared.dataTask(with: request) { data, response, error in
         guard let data = data else {
             completion(.failure(error ?? NSError(domain: "API Error", code: 0, userInfo: nil)))
             return

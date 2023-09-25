@@ -36,26 +36,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5c-KA-Ijj">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3n-Jq-Gmw">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Sound Seeker" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3n-Jq-Gmw">
                                         <rect key="frame" x="24" y="21" width="197" height="60"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Welcome to
-Sound Seeker</string>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kc-DB-WN2">
-                                        <rect key="frame" x="328" y="33" width="40" height="38"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="Setting"/>
-                                        <connections>
-                                            <segue destination="5s8-PJ-aQd" kind="push" id="ypb-Rl-ckR"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8a-q7-7Ix">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8a-q7-7Ix">
                                         <rect key="frame" x="70" y="456" width="254" height="39"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
@@ -70,7 +59,7 @@ Sound Seeker</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvm-3x-Ibw">
-                                        <rect key="frame" x="138" y="291" width="116" height="116"/>
+                                        <rect key="frame" x="138" y="290" width="116" height="118"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="microphone-2" backgroundImage="Ellipse 1"/>
@@ -78,10 +67,19 @@ Sound Seeker</string>
                                             <action selector="RecordTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eFM-0J-ed2"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Animation" translatesAutoresizingMaskIntoConstraints="NO" id="YKn-On-twr">
-                                        <rect key="frame" x="0.0" y="201" width="393" height="319"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8q7-jW-u4O">
+                                        <rect key="frame" x="308" y="24" width="64" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="6" maxY="0.0"/>
+                                        <state key="normal" image="Setting"/>
+                                        <connections>
+                                            <action selector="settingTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="snd-E5-uQF"/>
+                                        </connections>
+                                    </button>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="6E0-ca-cPU">
+                                        <rect key="frame" x="0.0" y="271" width="393" height="354"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -103,28 +101,29 @@ Sound Seeker</string>
                     </view>
                     <navigationItem key="navigationItem" id="dbe-SV-1yL"/>
                     <connections>
-                        <outlet property="Animation" destination="YKn-On-twr" id="Pbr-6b-iOW"/>
                         <outlet property="RecordButton" destination="Fvm-3x-Ibw" id="kxz-ER-guG"/>
+                        <outlet property="Settingbtn" destination="8q7-jW-u4O" id="oGW-ec-3eQ"/>
+                        <outlet property="activityIndicatorView" destination="6E0-ca-cPU" id="3b2-2N-fmg"/>
                         <outlet property="label1" destination="u8a-q7-7Ix" id="Qy8-nQ-TWs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-118.32061068702289" y="-25.35211267605634"/>
+            <point key="canvasLocation" x="-119.84732824427481" y="-26.760563380281692"/>
         </scene>
         <!--Setting-->
         <scene sceneID="sUq-nQ-S05">
             <objects>
-                <viewController title="Setting" interactionActivityTrackingBaseName="Setting" id="5s8-PJ-aQd" customClass="SettingViewController" customModule="Sound_Seeker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingViewController" title="Setting" interactionActivityTrackingBaseName="Setting" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5s8-PJ-aQd" customClass="SettingViewController" customModule="Sound_Seeker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I5c-Qn-LUd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wup-jY-fhX">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0S8-lf-a5D">
-                                        <rect key="frame" x="0.0" y="263" width="393" height="452"/>
+                                        <rect key="frame" x="0.0" y="279" width="393" height="480"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
@@ -156,11 +155,11 @@ Sound Seeker</string>
                                         <sections/>
                                     </tableView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StM-im-EyG">
-                                        <rect key="frame" x="25" y="60" width="335" height="162"/>
+                                        <rect key="frame" x="25" y="64" width="335" height="172"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upgrade to pro version!" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjs-Nn-9nk">
-                                                <rect key="frame" x="13" y="8" width="321" height="22"/>
+                                                <rect key="frame" x="13" y="8" width="321" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.10980392156862745" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
@@ -168,14 +167,14 @@ Sound Seeker</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Removed all ads and get the better experience with premium version!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ak5-tS-2tw">
-                                                <rect key="frame" x="13" y="35" width="321" height="62"/>
+                                                <rect key="frame" x="13" y="37" width="321" height="67"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3J8-JR-c5n">
-                                                <rect key="frame" x="64" y="102" width="198" height="51"/>
+                                                <rect key="frame" x="64" y="109" width="198" height="54"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                                 <state key="normal" image="Frame 4">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
@@ -206,38 +205,58 @@ Sound Seeker</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KV1-Z2-waW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="845" y="-25"/>
+            <point key="canvasLocation" x="621" y="-25"/>
         </scene>
-        <!--Found Song View Controller-->
-        <scene sceneID="JCc-EM-VI6">
+        <!--Web View Controller-->
+        <scene sceneID="Ax4-sm-740">
             <objects>
-                <viewController id="KBX-ts-pWE" customClass="FoundSongViewController" customModule="Sound_Seeker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ClS-W8-4j4">
+                <viewController storyboardIdentifier="WebViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SYE-m0-VeF" customClass="WebViewController" customModule="Sound_Seeker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L6C-aJ-8Hr">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Caz-MT-2RB" customClass="FoundSong">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9Q-vq-qlX">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fWf-Cr-tif">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </webView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="fWf-Cr-tif" secondAttribute="bottom" id="Bep-qi-BKm"/>
+                                    <constraint firstItem="fWf-Cr-tif" firstAttribute="top" secondItem="V9Q-vq-qlX" secondAttribute="top" id="Rpy-5z-ZqL"/>
+                                    <constraint firstItem="fWf-Cr-tif" firstAttribute="leading" secondItem="V9Q-vq-qlX" secondAttribute="leading" id="W6y-qC-U5I"/>
+                                    <constraint firstAttribute="trailing" secondItem="fWf-Cr-tif" secondAttribute="trailing" id="uIM-4j-2DQ"/>
+                                </constraints>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="KN8-DB-wha"/>
+                        <viewLayoutGuide key="safeArea" id="OaB-h6-NGP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Caz-MT-2RB" firstAttribute="top" secondItem="KN8-DB-wha" secondAttribute="top" id="AXC-QZ-LXJ"/>
-                            <constraint firstItem="Caz-MT-2RB" firstAttribute="leading" secondItem="KN8-DB-wha" secondAttribute="leading" id="CYF-0m-O8C"/>
-                            <constraint firstItem="KN8-DB-wha" firstAttribute="bottom" secondItem="Caz-MT-2RB" secondAttribute="bottom" id="brS-oN-TkZ"/>
-                            <constraint firstItem="KN8-DB-wha" firstAttribute="trailing" secondItem="Caz-MT-2RB" secondAttribute="trailing" id="fWq-Fo-dIc"/>
+                            <constraint firstItem="V9Q-vq-qlX" firstAttribute="leading" secondItem="OaB-h6-NGP" secondAttribute="leading" id="7Zd-gz-ai5"/>
+                            <constraint firstItem="OaB-h6-NGP" firstAttribute="bottom" secondItem="V9Q-vq-qlX" secondAttribute="bottom" id="MWy-gf-K6K"/>
+                            <constraint firstItem="V9Q-vq-qlX" firstAttribute="height" secondItem="L6C-aJ-8Hr" secondAttribute="height" multiplier="0.890845" id="NyG-RR-B9V"/>
+                            <constraint firstItem="V9Q-vq-qlX" firstAttribute="centerY" secondItem="OaB-h6-NGP" secondAttribute="centerY" id="VxW-QZ-GLj"/>
+                            <constraint firstItem="OaB-h6-NGP" firstAttribute="trailing" secondItem="V9Q-vq-qlX" secondAttribute="trailing" id="ag6-vH-IOV"/>
+                            <constraint firstItem="V9Q-vq-qlX" firstAttribute="width" secondItem="L6C-aJ-8Hr" secondAttribute="width" id="dzs-SD-ETF"/>
+                            <constraint firstItem="V9Q-vq-qlX" firstAttribute="width" secondItem="L6C-aJ-8Hr" secondAttribute="height" multiplier="131:284" id="ioS-1X-4lE"/>
+                            <constraint firstItem="V9Q-vq-qlX" firstAttribute="centerX" secondItem="OaB-h6-NGP" secondAttribute="centerX" id="rbF-jq-1ZZ"/>
+                            <constraint firstItem="V9Q-vq-qlX" firstAttribute="top" secondItem="OaB-h6-NGP" secondAttribute="top" id="yHE-tg-nE4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="WebView" destination="fWf-Cr-tif" id="dZa-4N-4La"/>
+                        <outlet property="webView" destination="fWf-Cr-tif" id="1Tr-07-zeE"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JoW-L1-39N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hUo-xZ-fLZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-118" y="644"/>
+            <point key="canvasLocation" x="1324" y="-25"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Animation" width="1125" height="1062"/>
         <image name="Ellipse 1" width="116" height="116"/>
         <image name="Frame 4" width="174" height="40"/>
         <image name="Setting" width="40" height="40"/>

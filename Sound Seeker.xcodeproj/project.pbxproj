@@ -47,7 +47,9 @@
 		CB9EDF092A5E845B00DEDE3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB9EDF072A5E845B00DEDE3E /* LaunchScreen.storyboard */; };
 		CBB4DE562A8090BD00DF5D70 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB4DE552A8090BD00DF5D70 /* RecordViewController.swift */; };
 		CBB76E072A790C1A00222BB6 /* API .swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB76E062A790C1A00222BB6 /* API .swift */; };
-		CBBD068C2A8A175100820FC6 /* FoundSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBD068B2A8A175100820FC6 /* FoundSongViewController.swift */; };
+		CBB9A4172ABA9B4800B98E45 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = CBB9A4162ABA9B4800B98E45 /* GoogleMobileAds */; };
+		CBBF838A2A94C2600087711F /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBF83892A94C2600087711F /* Song.swift */; };
+		CBC0CDF52AAEF6C100E4A192 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC0CDF42AAEF6C100E4A192 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,7 +68,8 @@
 		CB9EDF0A2A5E845B00DEDE3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBB4DE552A8090BD00DF5D70 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		CBB76E062A790C1A00222BB6 /* API .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API .swift"; sourceTree = "<group>"; };
-		CBBD068B2A8A175100820FC6 /* FoundSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundSongViewController.swift; sourceTree = "<group>"; };
+		CBBF83892A94C2600087711F /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		CBC0CDF42AAEF6C100E4A192 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,7 @@
 				CB9E76932A837E3C00DCC742 /* FirebaseRemoteConfig in Frameworks */,
 				CB9E766F2A837E3B00DCC742 /* FirebaseAppDistribution-Beta in Frameworks */,
 				CB9E76732A837E3B00DCC742 /* FirebaseAuthCombine-Community in Frameworks */,
+				CBB9A4172ABA9B4800B98E45 /* GoogleMobileAds in Frameworks */,
 				CB9E76912A837E3C00DCC742 /* FirebasePerformance in Frameworks */,
 				CB9E76892A837E3C00DCC742 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				CB9E76972A837E3C00DCC742 /* FirebaseStorage in Frameworks */,
@@ -159,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				CBB76E062A790C1A00222BB6 /* API .swift */,
+				CBBF83892A94C2600087711F /* Song.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -178,8 +183,8 @@
 			children = (
 				CB9E769D2A8393A500DCC742 /* TableViewCell */,
 				CBB4DE552A8090BD00DF5D70 /* RecordViewController.swift */,
-				CBBD068B2A8A175100820FC6 /* FoundSongViewController.swift */,
 				CB9E765F2A833D2B00DCC742 /* SettingViewController.swift */,
+				CBC0CDF42AAEF6C100E4A192 /* WebViewController.swift */,
 			);
 			path = "ViewController ";
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 				CB9E76942A837E3C00DCC742 /* FirebaseRemoteConfigSwift */,
 				CB9E76962A837E3C00DCC742 /* FirebaseStorage */,
 				CB9E76982A837E3C00DCC742 /* FirebaseStorageCombine-Community */,
+				CBB9A4162ABA9B4800B98E45 /* GoogleMobileAds */,
 			);
 			productName = "Sound Seeker";
 			productReference = CB9EDEF92A5E845900DEDE3E /* Sound Seeker.app */;
@@ -268,6 +274,7 @@
 			mainGroup = CB9EDEF02A5E845900DEDE3E;
 			packageReferences = (
 				CB9E76632A837E3B00DCC742 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CBB9A4152ABA9B4800B98E45 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			productRefGroup = CB9EDEFA2A5E845900DEDE3E /* Products */;
 			projectDirPath = "";
@@ -299,9 +306,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB9EDEFD2A5E845900DEDE3E /* AppDelegate.swift in Sources */,
-				CBBD068C2A8A175100820FC6 /* FoundSongViewController.swift in Sources */,
+				CBC0CDF52AAEF6C100E4A192 /* WebViewController.swift in Sources */,
 				CBB4DE562A8090BD00DF5D70 /* RecordViewController.swift in Sources */,
 				CB9E76A02A8393BF00DCC742 /* SettingTableViewCell.swift in Sources */,
+				CBBF838A2A94C2600087711F /* Song.swift in Sources */,
 				CB9EDEFF2A5E845900DEDE3E /* SceneDelegate.swift in Sources */,
 				CBB76E072A790C1A00222BB6 /* API .swift in Sources */,
 				CB9E76602A833D2B00DCC742 /* SettingViewController.swift in Sources */,
@@ -467,6 +475,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "hungvu.Sound-Seeker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -496,6 +506,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "hungvu.Sound-Seeker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -531,6 +543,14 @@
 		CB9E76632A837E3B00DCC742 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+		CBB9A4152ABA9B4800B98E45 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 10.0.0;
@@ -673,6 +693,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CB9E76632A837E3B00DCC742 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		CBB9A4162ABA9B4800B98E45 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBB9A4152ABA9B4800B98E45 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

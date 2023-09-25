@@ -12,4 +12,3 @@ struct BGColor {
     static let customBackgroundColor = UIColor(red: 24/255, green: 24/255, blue: 28/255, alpha: 1)
 }
 
-
